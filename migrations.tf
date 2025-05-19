@@ -19,3 +19,18 @@ moved {
   from = kubernetes_job.helm_argo_application_wait
   to   = module.addon.kubernetes_job.helm_argo_application_wait
 }
+
+moved {
+  from = aws_iam_role.this[0]
+  to   = module.addon-irsa["policy-reporter"].aws_iam_role.this[0]
+}
+
+moved {
+  from = aws_iam_policy.this[0]
+  to   = module.addon-irsa["policy-reporter"].aws_iam_policy.this[0]
+}
+
+moved {
+  from = aws_iam_role_policy_attachment.this[0]
+  to   = module.addon-irsa["policy-reporter"].aws_iam_role_policy_attachment.this[0]
+}
