@@ -1,10 +1,10 @@
 /**
- * # AWS EKS Universal Addon Terraform module
+ * # AWS EKS Kyverno policy reporter Terraform module
  *
- * A Terraform module to deploy the universal addon on Amazon EKS cluster.
+ * A Terraform module to deploy the [Kyverno policy reporter](https://github.com/kyverno/policy-reporter) on Amazon EKS cluster.
  *
- * [![Terraform validate](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/validate.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/validate.yaml)
- * [![pre-commit](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-universal-addon/actions/workflows/pre-commit.yaml)
+ * [![Terraform validate](https://github.com/lablabs/terraform-aws-eks-kyverno-policy-reporter/actions/workflows/validate.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-kyverno-policy-reporter/actions/workflows/validate.yaml)
+ * [![pre-commit](https://github.com/lablabs/terraform-aws-eks-kyverno-policy-reporter/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-kyverno-policy-reporter/actions/workflows/pre-commit.yml)
  */
 
 locals {
