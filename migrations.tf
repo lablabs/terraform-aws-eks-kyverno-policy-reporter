@@ -1,4 +1,3 @@
-
 moved {
   from = kubernetes_manifest.this
   to   = module.addon.kubernetes_manifest.this
@@ -7,7 +6,6 @@ moved {
 moved {
   from = helm_release.this
   to   = module.addon.helm_release.this
-
 }
 
 moved {
@@ -21,16 +19,31 @@ moved {
 }
 
 moved {
-  from = aws_iam_role.this[0]
-  to   = module.addon-irsa["policy-reporter"].aws_iam_role.this[0]
+  from = kubernetes_role.helm_argo_application_wait
+  to   = module.addon.kubernetes_role.helm_argo_application_wait
 }
 
 moved {
-  from = aws_iam_policy.this[0]
-  to   = module.addon-irsa["policy-reporter"].aws_iam_policy.this[0]
+  from = kubernetes_role_binding.helm_argo_application_wait
+  to   = module.addon.kubernetes_role_binding.helm_argo_application_wait
 }
 
 moved {
-  from = aws_iam_role_policy_attachment.this[0]
-  to   = module.addon-irsa["policy-reporter"].aws_iam_role_policy_attachment.this[0]
+  from = kubernetes_service_account.helm_argo_application_wait
+  to   = module.addon.kubernetes_service_account.helm_argo_application_wait
+}
+
+moved {
+  from = aws_iam_role.this
+  to   = module.addon-irsa["policy-reporter"].aws_iam_role.this
+}
+
+moved {
+  from = aws_iam_policy.this
+  to   = module.addon-irsa["policy-reporter"].aws_iam_policy.this
+}
+
+moved {
+  from = aws_iam_role_policy_attachment.this
+  to   = module.addon-irsa["policy-reporter"].aws_iam_role_policy_attachment.this
 }
