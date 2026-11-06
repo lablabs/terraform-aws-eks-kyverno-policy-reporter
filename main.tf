@@ -10,7 +10,7 @@ locals {
   addon = {
     name = "policy-reporter"
 
-    helm_chart_version = "2.24.2"
+    helm_chart_version = "3.11.2"
     helm_repo_url      = "https://kyverno.github.io/policy-reporter/"
   }
 
